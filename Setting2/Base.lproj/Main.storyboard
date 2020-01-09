@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5K1-JQ-0ri">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Setting2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oDn-XS-SPg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="100" id="hh7-Lf-9I1" customClass="CardNameTableViewCell" customModule="Setting2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hh7-Lf-9I1" id="Bhx-II-mpJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crad Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2X-wy-9fk">
+                                                    <rect key="frame" x="145" y="36" width="249" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="249" id="4YC-ie-yp0"/>
+                                                        <constraint firstAttribute="height" constant="28" id="Hnf-ov-fSn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cxj-QT-cDr">
+                                                    <rect key="frame" x="43" y="11" width="94" height="78"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="78" id="HZj-eD-tJh"/>
+                                                        <constraint firstAttribute="width" constant="94" id="a4h-dA-Dz1"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="S2X-wy-9fk" firstAttribute="trailing" secondItem="Bhx-II-mpJ" secondAttribute="trailingMargin" id="1RC-CR-IRd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="S2X-wy-9fk" secondAttribute="bottom" constant="25" id="2yC-0C-oJn"/>
+                                                <constraint firstItem="S2X-wy-9fk" firstAttribute="leading" secondItem="Cxj-QT-cDr" secondAttribute="trailing" constant="8" id="Zjk-w6-0Pp"/>
+                                                <constraint firstItem="Cxj-QT-cDr" firstAttribute="top" secondItem="Bhx-II-mpJ" secondAttribute="topMargin" id="lAc-Z3-WTb"/>
+                                                <constraint firstItem="S2X-wy-9fk" firstAttribute="top" secondItem="Bhx-II-mpJ" secondAttribute="topMargin" constant="25" id="pD7-Wu-kCh"/>
+                                                <constraint firstItem="Cxj-QT-cDr" firstAttribute="bottom" secondItem="Bhx-II-mpJ" secondAttribute="bottomMargin" id="pbp-18-jHN"/>
+                                                <constraint firstItem="Cxj-QT-cDr" firstAttribute="leading" secondItem="Bhx-II-mpJ" secondAttribute="leadingMargin" constant="23" id="qDF-ey-zgG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CardImageView" destination="Cxj-QT-cDr" id="xde-B4-Wxw"/>
+                                            <outlet property="CardName" destination="S2X-wy-9fk" id="Pk0-8d-qbz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="xJy-SS-7qD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="rgN-eS-t1V"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oDn-XS-SPg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3kM-Ir-H37"/>
+                            <constraint firstAttribute="bottom" secondItem="oDn-XS-SPg" secondAttribute="bottom" id="5GK-lR-hp5"/>
+                            <constraint firstItem="oDn-XS-SPg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uEy-JM-D2b"/>
+                            <constraint firstAttribute="trailing" secondItem="oDn-XS-SPg" secondAttribute="trailing" id="yMD-lU-FBJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mIN-e2-pXO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905.79710144927549" y="113.83928571428571"/>
+        </scene>
+        <!--Card Detail View Controller-->
+        <scene sceneID="nve-6E-INH">
+            <objects>
+                <viewController storyboardIdentifier="CardInfo" id="Ndr-4Z-hde" customClass="CardDetailViewController" customModule="Setting2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HWg-e4-Qnt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hTI-h4-OSI">
+                                <rect key="frame" x="70" y="114" width="257" height="398"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardNumber" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pz-bR-a9m">
+                                <rect key="frame" x="80" y="583" width="240" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="YES-5z-1md">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="240" id="ot4-MY-PO7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CardDetail" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-cU-6w4">
+                                <rect key="frame" x="80" y="644" width="240" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="gAW-Pl-yX2"/>
+                                    <constraint firstAttribute="height" constant="126" id="slE-3I-PHV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5z5-cU-6w4" firstAttribute="top" secondItem="7Pz-bR-a9m" secondAttribute="bottom" constant="46" id="8wg-Y6-pYU">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="7Pz-bR-a9m" firstAttribute="top" secondItem="hTI-h4-OSI" secondAttribute="bottom" constant="71" id="EFh-B3-Ty8">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-250"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-280"/>
+                            </constraint>
+                            <constraint firstItem="5z5-cU-6w4" firstAttribute="leading" secondItem="dBS-RN-WOR" secondAttribute="leading" constant="87" id="LPx-9G-sY8">
+                                <variation key="heightClass=compact-widthClass=compact" constant="280"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="450"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="7Pz-bR-a9m" firstAttribute="leading" secondItem="dBS-RN-WOR" secondAttribute="leading" constant="87" id="UUt-el-UUu">
+                                <variation key="heightClass=compact-widthClass=compact" constant="280"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="450"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="hTI-h4-OSI" firstAttribute="leading" secondItem="dBS-RN-WOR" secondAttribute="leading" constant="87" id="aDe-8r-aVU">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                            </constraint>
+                            <constraint firstItem="dBS-RN-WOR" firstAttribute="trailing" secondItem="hTI-h4-OSI" secondAttribute="trailing" constant="87" id="aZ3-TZ-GeZ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="350"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="420"/>
+                            </constraint>
+                            <constraint firstItem="dBS-RN-WOR" firstAttribute="bottom" secondItem="hTI-h4-OSI" secondAttribute="bottom" constant="351" id="bcJ-tO-krh">
+                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="350"/>
+                            </constraint>
+                            <constraint firstItem="hTI-h4-OSI" firstAttribute="top" secondItem="dBS-RN-WOR" secondAttribute="top" constant="121" id="d8o-B0-9S5">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                            </constraint>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dBS-RN-WOR"/>
+                    </view>
+                    <connections>
+                        <outlet property="CardDetailImage" destination="hTI-h4-OSI" id="MwP-gD-WG3"/>
+                        <outlet property="CardDetailText" destination="5z5-cU-6w4" id="F9W-DJ-4Qf"/>
+                        <outlet property="CardNumberlbl" destination="7Pz-bR-a9m" id="fir-iJ-idC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaC-7y-ihW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1650.7246376811595" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LMW-ke-2Ra">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5K1-JQ-0ri" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dc1-tn-03o">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TFZ-S1-Jtw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XW5-h5-EbZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="114"/>
+        </scene>
+    </scenes>
+</document>
